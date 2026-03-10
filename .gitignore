@@ -3,6 +3,12 @@
 *.FCStd1
 *.stl
 
+# KiCad generated outputs (regenerate with pcb/generate_kicad.py)
+# Keep: .kicad_pro, .kicad_sch, .kicad_pcb, .svg, netlist, bom (source files)
+pcb/*-backups/
+pcb/fp-info-cache
+pcb/*.kicad_prl
+
 # Python
 __pycache__/
 *.pyc

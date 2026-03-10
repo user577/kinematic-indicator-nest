@@ -1,0 +1,202 @@
+# Kinematic Indicator Nest - Signal Conditioning PCB
+# Netlist v1.0 - 2026-03-10
+# Board: 25mm x 35mm, 2-layer, 1oz Cu
+
+============================================================
+BILL OF MATERIALS
+============================================================
+Ref    Value        Package              Description
+----------------------------------------------------------------------
+U1     78L05        SOT-89               5V 100mA LDO regulator
+U2     SS49E        TO-92                Ratiometric linear hall effect sensor
+U3     LM393        SOIC-8               Dual comparator, open collector output
+Q1     2N7000       TO-92                N-channel MOSFET, red LED driver
+D1     1N4148       SOD-123              Reverse polarity protection diode
+D2     LED_Amber    LED_THT_5mm          Amber LED 1000mcd, seated indicator
+D3     LED_Red      LED_THT_5mm          Red LED 1000mcd, deflection alarm
+RV1    10k          Trimmer_3296W        10-turn trimmer, threshold adjust
+R1     10k          0603                 LM393 U3A output pullup
+R2     150R         0603                 Amber LED current limit (20mA)
+R3     150R         0603                 Red LED current limit (20mA)
+R4     100k         0603                 U3B IN+ bias to 5V
+R5     100k         0603                 U3B IN+ bias to GND
+R6     1M           0603                 U3B hysteresis feedback
+R7     680k         0603                 U3B timing resistor
+R8     10k          0603                 U3B output pullup
+R9     1k           0603                 Q1 gate series resistor
+C1     100nF        0603                 78L05 input bypass
+C2     100nF        0603                 78L05 output bypass
+C3     10uF         0805                 5V bulk decoupling
+C4     100nF        0603                 SS49E VCC bypass
+C5     2.2uF        0603                 U3B timing capacitor
+J1     Conn_01x02   PinHeader_1x02_P2.54mm 24VDC power input
+J2     Conn_01x03   PinHeader_1x03_P2.54mm Hall sensor (VCC,OUT,GND)
+J3     Conn_01x04   PinHeader_1x04_P2.54mm LED output (GND,RED,AMB,5V)
+
+Total components: 25
+
+============================================================
+NETLIST
+============================================================
+
+Net: 24V_IN
+  J1.1
+  D1.A
+
+Net: 24V
+  D1.K
+  U1.IN
+  C1.1
+
+Net: +5V
+  U1.OUT
+  C2.1
+  C3.1
+  C4.1
+  U2.VCC
+  U3.VCC
+  R1.1
+  R2.1
+  R4.1
+  R8.1
+  RV1.H
+  J2.1
+  J3.4
+
+Net: GND
+  J1.2
+  C1.2
+  C2.2
+  C3.2
+  C4.2
+  U1.GND
+  U2.GND
+  U3.GND
+  R5.2
+  Q1.S
+  C5.2
+  RV1.L
+  J2.3
+  J3.1
+
+Net: HALL_OUT
+  U2.OUT
+  U3A.IN-
+  J2.2
+
+Net: VREF
+  RV1.W
+  U3A.IN+
+
+Net: COMP_A
+  U3A.OUT
+  R1.2
+  R2.2_via_LED
+  R9.1
+
+Net: AMB_LED_A
+  R2.2
+  D2.A
+
+Net: AMB_LED_K
+  D2.K
+  U3A.OUT
+
+Net: Q1_GATE
+  R9.2
+  Q1.G
+
+Net: RED_LED_DRIVE
+  U3B.OUT
+  R8.2
+  R3.1
+
+Net: RED_LED_A
+  R3.2
+  D3.A
+
+Net: RED_LED_K
+  D3.K
+  Q1.D
+
+Net: OSC_INP
+  R4.2
+  R5.1
+  R6.1
+  U3B.IN+
+
+Net: OSC_INM
+  R7.2
+  C5.1
+  U3B.IN-
+
+Net: OSC_FB
+  R6.2
+  R7.1
+  U3B.OUT
+
+
+============================================================
+CIRCUIT DESCRIPTION
+============================================================
+
+POWER SUPPLY:
+  24VDC (J1) -> D1 (1N4148, reverse protection) -> U1 (78L05)
+  C1 100nF on input, C2 100nF + C3 10uF on 5V output
+  Max current: ~60mA (sensor 10mA + LEDs 40mA + logic 10mA)
+
+HALL EFFECT SENSOR:
+  U2 (SS49E) ratiometric output: ~2.5V quiescent, +/-0.6V/mT
+  C4 100nF bypass on VCC pin
+  Sensor mounted on base plate, connected via J2 (3-pin header)
+  Wire run ~50mm from PCB pocket to sensor pocket
+
+THRESHOLD COMPARATOR (U3A):
+  Non-inverting input (IN+): RV1 wiper (adjustable 0-5V reference)
+  Inverting input (IN-): SS49E analog output
+  Open collector output with R1 10k pullup to 5V
+
+  Seated state: magnet close to sensor, VOUT > VREF
+    -> IN- > IN+ -> U3A output transistor ON -> OUT = LOW (~0.2V)
+    -> Current flows: 5V -> R2 -> amber LED -> U3A OUT -> GND
+    -> Amber LED ON (steady)
+
+  Deflected state: magnet moves away, VOUT drops < VREF
+    -> IN- < IN+ -> U3A output transistor OFF -> OUT = HIGH (5V via R1)
+    -> No current through amber LED (both sides at 5V)
+    -> Amber LED OFF
+    -> Q1 gate HIGH -> Q1 ON -> red LED circuit enabled
+
+2Hz OSCILLATOR (U3B):
+  Relaxation oscillator using positive feedback (hysteresis)
+  R4 100k + R5 100k: bias IN+ to 2.5V center
+  R6 1M: positive feedback from OUT to IN+ (hysteresis ~0.45V)
+  R7 680k + C5 2.2uF: RC timing on IN-
+  R8 10k: output pullup
+
+  Thresholds: ~2.27V / ~2.73V (from hysteresis)
+  Frequency: ~2Hz (adjustable by C5 value)
+
+  Output square wave drives red LED through R3 when Q1 is ON
+
+RED LED FLASH DRIVER:
+  Q1 (2N7000) gate driven by U3A output via R9 (1k gate resistor)
+  Deflected -> Q1 ON -> red LED cathode to GND
+  U3B oscillator output -> R3 150R -> red LED anode
+  Red LED flashes at ~2Hz when nest is deflected
+
+  Seated -> Q1 OFF -> red LED dark regardless of oscillator
+
+LED CONNECTIONS:
+  D2 (amber) and D3 (red) are 5mm THT LEDs
+  Mounted remotely on base plate edge via J3 (4-pin header)
+  J3 pinout: 1=GND, 2=RED_K, 3=AMB_K, 4=+5V
+  Note: LED anodes connected to signal lines on PCB,
+  cathodes returned via J3 to PCB open collectors/MOSFETs
+
+TRIM POT CALIBRATION:
+  RV1 (Bourns 3296W, 10-turn) sets detection threshold
+  CW rotation: higher threshold -> less sensitive
+  CCW rotation: lower threshold -> more sensitive (0.01mm)
+  Factory set: ~50% (2.5V) then fine-tune with test magnet/gap
+  10-turn resolution: ~0.5mV per turn -> ~0.001mm per turn

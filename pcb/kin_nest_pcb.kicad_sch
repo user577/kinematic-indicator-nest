@@ -1,0 +1,30 @@
+(kicad_sch
+  (version 20231120)
+  (generator "kinematic_nest_gen")
+  (generator_version "1.0")
+  (uuid "00000001-0000-0000-0000-000000000001")
+  (paper "A4")
+
+  (title_block
+    (title "Kinematic Indicator Nest - Signal Conditioning")
+    (date "2026-03-10")
+    (rev "1.0")
+    (comment 1 "24VDC -> 78L05 -> SS49E -> LM393 -> LED drivers")
+    (comment 2 "Phase 1: Passive indicator (hall + comparator + LED)")
+    (comment 3 "PCB: 25mm x 35mm, mounts in base plate recess")
+  )
+
+  (text "CIRCUIT NOTES:\n\n"
+    "Power: 24VDC -> D1 (1N4148) -> U1 (78L05) -> 5V\n"
+    "Sensor: U2 (SS49E) VOUT to U3A IN-\n"
+    "Threshold: RV1 (10k trim) wiper to U3A IN+\n"
+    "Comparator: U3 (LM393) dual\n"
+    "  U3A: threshold detect (seated/deflected)\n"
+    "  U3B: 2Hz astable oscillator\n"
+    "Amber LED: 5V->R2->D2->U3A OUT (ON when seated)\n"
+    "Red LED: U3B OUT->R3->D3->Q1 drain (flash when deflected)\n"
+    "Q1 gate: U3A OUT via R9 (ON when deflected)"
+    (at 20 40)
+    (effects (font (size 2 2)))
+  )
+)

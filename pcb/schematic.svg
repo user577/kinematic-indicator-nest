@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" style="background:#fff;font-family:monospace">
+<rect x="0" y="0" width="800" height="600" fill="white" stroke="black" stroke-width="2"/>
+<text x="400" y="25" text-anchor="middle" font-size="16" font-weight="bold">Kinematic Indicator Nest - Signal Conditioning PCB</text>
+<text x="400" y="42" text-anchor="middle" font-size="11" fill="#666">Rev 1.0 | 25x35mm | 24VDC input | Phase 1 passive indicator</text>
+<text x="120" y="70" text-anchor="middle" font-size="12" fill="black" font-weight="bold">POWER SUPPLY</text>
+<rect x="40" y="90" width="30" height="40" fill="#f0f0f0" stroke="black" stroke-width="1.5" rx="2"/>
+<text x="55" y="105" text-anchor="middle" font-size="9" fill="black" font-weight="bold">J1</text>
+<text x="55" y="118" text-anchor="middle" font-size="8" fill="black">24VDC</text>
+<line x1="70" y1="100" x2="90" y2="100" stroke="black" stroke-width="1.5"/>
+<text x="75" y="97" text-anchor="start" font-size="8" fill="black">+</text>
+<line x1="70" y1="120" x2="90" y2="120" stroke="black" stroke-width="1.5"/>
+<text x="75" y="117" text-anchor="start" font-size="8" fill="black">-</text>
+<line x1="90" y1="100" x2="100" y2="100" stroke="black" stroke-width="1.5"/>
+<polygon points="100,95 100,105 112,100" fill="none" stroke="black" stroke-width="1.5"/>
+<line x1="112" y1="95" x2="112" y2="105" stroke="black" stroke-width="1.5"/>
+<text x="106" y="93" text-anchor="middle" font-size="8" fill="black">D1</text>
+<text x="106" y="112" text-anchor="middle" font-size="7" fill="#666">1N4148</text>
+<line x1="112" y1="100" x2="130" y2="100" stroke="black" stroke-width="1.5"/>
+<line x1="125" y1="100" x2="125" y2="107" stroke="black" stroke-width="1.5"/>
+<line x1="120" y1="107" x2="130" y2="107" stroke="black" stroke-width="1.5"/>
+<line x1="120" y1="110" x2="130" y2="110" stroke="black" stroke-width="1.5"/>
+<line x1="125" y1="110" x2="125" y2="120" stroke="black" stroke-width="1.5"/>
+<text x="135" y="109" text-anchor="start" font-size="7" fill="black">C1</text>
+<text x="135" y="117" text-anchor="start" font-size="7" fill="#666">100nF</text>
+<rect x="140" y="92" width="50" height="36" fill="#e8f4e8" stroke="black" stroke-width="1.5" rx="2"/>
+<text x="165" y="108" text-anchor="middle" font-size="9" fill="black" font-weight="bold">U1</text>
+<text x="165" y="120" text-anchor="middle" font-size="8" fill="#666">78L05</text>
+<text x="138" y="104" text-anchor="end" font-size="7" fill="black">IN</text>
+<text x="192" y="104" text-anchor="start" font-size="7" fill="black">OUT</text>
+<text x="165" y="132" text-anchor="middle" font-size="7" fill="black">GND</text>
+<line x1="130" y1="100" x2="140" y2="100" stroke="black" stroke-width="1.5"/>
+<line x1="190" y1="100" x2="240" y2="100" stroke="black" stroke-width="1.5"/>
+<line x1="165" y1="128" x2="165" y2="140" stroke="black" stroke-width="1.5"/>
+<circle cx="125" cy="100" r="2.5" fill="black" stroke="black" stroke-width="0"/>
+<text x="240" y="97" text-anchor="start" font-size="10" fill="red" font-weight="bold">+5V</text>
+<line x1="240" y1="100" x2="260" y2="100" stroke="red" stroke-width="2"/>
+<line x1="205" y1="100" x2="205" y2="107" stroke="black" stroke-width="1.5"/>
+<line x1="200" y1="107" x2="210" y2="107" stroke="black" stroke-width="1.5"/>
+<line x1="200" y1="110" x2="210" y2="110" stroke="black" stroke-width="1.5"/>
+<line x1="205" y1="110" x2="205" y2="120" stroke="black" stroke-width="1.5"/>
+<text x="215" y="109" text-anchor="start" font-size="7" fill="#666">C2 100nF</text>
+<circle cx="205" cy="100" r="2.5" fill="black" stroke="black" stroke-width="0"/>
+<line x1="225" y1="100" x2="225" y2="107" stroke="black" stroke-width="1.5"/>
+<line x1="220" y1="107" x2="230" y2="107" stroke="black" stroke-width="1.5"/>
+<line x1="220" y1="110" x2="230" y2="110" stroke="black" stroke-width="1.5"/>
+<line x1="225" y1="110" x2="225" y2="120" stroke="black" stroke-width="1.5"/>
+<text x="235" y="109" text-anchor="start" font-size="7" fill="#666">C3 10uF</text>
+<circle cx="225" cy="100" r="2.5" fill="black" stroke="black" stroke-width="0"/>
+<line x1="90" y1="120" x2="225" y2="120" stroke="black" stroke-width="1.5"/>
+<text x="160" y="135" text-anchor="middle" font-size="9" fill="#444">GND</text>
+<line x1="121" y1="120" x2="129" y2="120" stroke="black" stroke-width="1.5"/>
+<line x1="161" y1="120" x2="169" y2="120" stroke="black" stroke-width="1.5"/>
+<line x1="201" y1="120" x2="209" y2="120" stroke="black" stroke-width="1.5"/>
+<line x1="221" y1="120" x2="229" y2="120" stroke="black" stroke-width="1.5"/>
+<text x="480" y="70" text-anchor="middle" font-size="12" fill="black" font-weight="bold">HALL EFFECT SENSOR</text>
+<rect x="420" y="90" width="50" height="50" fill="#e8e8f4" stroke="black" stroke-width="1.5" rx="2"/>
+<text x="445" y="110" text-anchor="middle" font-size="9" fill="black" font-weight="bold">U2</text>
+<text x="445" y="125" text-anchor="middle" font-size="8" fill="#666">SS49E</text>
+<text x="418" y="104" text-anchor="end" font-size="7" fill="black">VCC</text>
+<text x="418" y="134" text-anchor="end" font-size="7" fill="black">GND</text>
+<text x="472" y="120" text-anchor="start" font-size="7" fill="black">OUT</text>
+<line x1="400" y1="100" x2="420" y2="100" stroke="black" stroke-width="1.5"/>
+<text x="398" y="97" text-anchor="end" font-size="9" fill="red">+5V</text>
+<line x1="400" y1="130" x2="420" y2="130" stroke="black" stroke-width="1.5"/>
+<line x1="470" y1="116" x2="510" y2="116" stroke="black" stroke-width="1.5"/>
+<text x="512" y="113" text-anchor="start" font-size="8" fill="blue">HALL_OUT</text>
+<line x1="410" y1="100" x2="410" y2="107" stroke="black" stroke-width="1.5"/>
+<line x1="405" y1="107" x2="415" y2="107" stroke="black" stroke-width="1.5"/>
+<line x1="405" y1="110" x2="415" y2="110" stroke="black" stroke-width="1.5"/>
+<line x1="410" y1="110" x2="410" y2="130" stroke="black" stroke-width="1.5"/>
+<text x="398" y="112" text-anchor="end" font-size="7" fill="black">C4</text>
+<text x="398" y="120" text-anchor="end" font-size="7" fill="#666">100nF</text>
+<circle cx="410" cy="100" r="2.5" fill="black" stroke="black" stroke-width="0"/>
+<circle cx="410" cy="130" r="2.5" fill="black" stroke="black" stroke-width="0"/>
+<rect x="510" y="85" width="35" height="60" fill="#f0f0f0" stroke="black" stroke-width="1.5" rx="2"/>
+<text x="527" y="100" text-anchor="middle" font-size="9" fill="black" font-weight="bold">J2</text>
+<text x="527" y="112" text-anchor="middle" font-size="7" fill="black">SENSOR</text>
+<text x="527" y="123" text-anchor="middle" font-size="7" fill="#666">3-pin</text>
+<text x="527" y="135" text-anchor="middle" font-size="7" fill="#666">header</text>
+<text x="200" y="195" text-anchor="middle" font-size="12" fill="black" font-weight="bold">THRESHOLD COMPARATOR</text>
+<rect x="80" y="220" width="40" height="50" fill="#fff8e0" stroke="black" stroke-width="1.5" rx="2"/>
+<text x="100" y="240" text-anchor="middle" font-size="9" fill="black" font-weight="bold">RV1</text>
+<text x="100" y="255" text-anchor="middle" font-size="8" fill="#666">10k</text>
+<text x="100" y="265" text-anchor="middle" font-size="7" fill="#999">10-turn</text>
+<line x1="100" y1="215" x2="100" y2="220" stroke="black" stroke-width="1.5"/>
+<text x="102" y="212" text-anchor="start" font-size="8" fill="red">+5V</text>
+<line x1="100" y1="270" x2="100" y2="280" stroke="black" stroke-width="1.5"/>
+<text x="102" y="282" text-anchor="start" font-size="8" fill="black">GND</text>
+<line x1="120" y1="245" x2="150" y2="245" stroke="black" stroke-width="1.5"/>
+<text x="135" y="242" text-anchor="middle" font-size="8" fill="blue">VREF</text>
+<circle cx="120" cy="245" r="2.5" fill="black" stroke="black" stroke-width="0"/>
+<polygon points="180,230 180,280 230,255" fill="#f4e8e8" stroke="black" stroke-width="1.5"/>
+<text x="200" y="252" text-anchor="middle" font-size="9" fill="black" font-weight="bold">U3A</text>
+<text x="200" y="265" text-anchor="middle" font-size="7" fill="#666">LM393</text>
+<text x="185" y="247" text-anchor="start" font-size="10" fill="black">+</text>
+<text x="185" y="270" text-anchor="start" font-size="10" fill="black">-</text>
+<line x1="150" y1="245" x2="180" y2="242" stroke="black" stroke-width="1.5"/>
+<line x1="150" y1="268" x2="180" y2="268" stroke="black" stroke-width="1.5"/>
+<text x="148" y="265" text-anchor="end" font-size="8" fill="blue">HALL_OUT</text>
+<line x1="230" y1="255" x2="260" y2="255" stroke="black" stroke-width="1.5"/>
+<text x="262" y="252" text-anchor="start" font-size="8" fill="#c00" font-weight="bold">COMP_A</text>
+<line x1="245" y1="255" x2="245" y2="240" stroke="black" stroke-width="1.5"/>
+<rect x="242" y="232" width="6" height="8" fill="#f0f0f0" stroke="black" stroke-width="1" rx="2"/>
+<line x1="245" y1="232" x2="245" y2="225" stroke="black" stroke-width="1.5"/>
+<text x="253" y="238" text-anchor="start" font-size="7" fill="#666">R1 10k</text>
+<text x="247" y="222" text-anchor="start" font-size="8" fill="red">+5V</text>
+<circle cx="245" cy="255" r="2.5" fill="black" stroke="black" stroke-width="0"/>
+<text x="480" y="185" text-anchor="middle" font-size="12" fill="black" font-weight="bold">2Hz OSCILLATOR</text>
+<polygon points="420,210 420,260 470,235" fill="#f4e8e8" stroke="black" stroke-width="1.5"/>
+<text x="440" y="232" text-anchor="middle" font-size="9" fill="black" font-weight="bold">U3B</text>
+<text x="425" y="227" text-anchor="start" font-size="10" fill="black">+</text>
+<text x="425" y="250" text-anchor="start" font-size="10" fill="black">-</text>
+<line x1="380" y1="222" x2="420" y2="222" stroke="black" stroke-width="1.5"/>
+<text x="370" y="215" text-anchor="start" font-size="7" fill="#666">R4 100k</text>
+<text x="370" y="208" text-anchor="start" font-size="7" fill="red">to +5V</text>
+<text x="370" y="230" text-anchor="start" font-size="7" fill="#666">R5 100k</text>
+<text x="370" y="237" text-anchor="start" font-size="7" fill="black">to GND</text>
+<line x1="470" y1="235" x2="490" y2="235" stroke="black" stroke-width="1.5"/>
+<line x1="490" y1="235" x2="490" y2="200" stroke="black" stroke-width="1.5"/>
+<line x1="490" y1="200" x2="410" y2="200" stroke="black" stroke-width="1.5"/>
+<line x1="410" y1="200" x2="410" y2="222" stroke="black" stroke-width="1.5"/>
+<text x="450" y="197" text-anchor="middle" font-size="7" fill="#666">R6 1M (feedback)</text>
+<circle cx="410" cy="222" r="2.5" fill="black" stroke="black" stroke-width="0"/>
+<line x1="390" y1="248" x2="420" y2="248" stroke="black" stroke-width="1.5"/>
+<text x="388" y="245" text-anchor="end" font-size="7" fill="#666">R7 680k</text>
+<text x="388" y="255" text-anchor="end" font-size="7" fill="#666">C5 2.2uF</text>
+<text x="492" y="232" text-anchor="start" font-size="8" fill="#c00">OSC_OUT</text>
+<text x="475" y="225" text-anchor="start" font-size="7" fill="#666">R8 10k</text>
+<text x="260" y="355" text-anchor="middle" font-size="12" fill="black" font-weight="bold">LED DRIVERS</text>
+<text x="80" y="380" text-anchor="start" font-size="10" fill="black" font-weight="bold">AMBER LED (seated indicator):</text>
+<text x="80" y="398" text-anchor="start" font-size="9" fill="black">+5V --> R2 (150R) --> D2 (amber) --> U3A OUT (open collector)</text>
+<text x="80" y="412" text-anchor="start" font-size="9" fill="#080">Seated: U3A sinks current --> LED ON (steady)</text>
+<text x="80" y="424" text-anchor="start" font-size="9" fill="#800">Deflected: U3A floats HIGH --> no current --> LED OFF</text>
+<text x="80" y="450" text-anchor="start" font-size="10" fill="black" font-weight="bold">RED LED (deflection alarm, 2Hz flash):</text>
+<text x="80" y="468" text-anchor="start" font-size="9" fill="black">OSC_OUT --> R3 (150R) --> D3 (red) --> Q1 drain</text>
+<text x="80" y="480" text-anchor="start" font-size="9" fill="black">Q1 (2N7000) gate = COMP_A via R9 (1k), source = GND</text>
+<text x="80" y="494" text-anchor="start" font-size="9" fill="#800">Deflected: COMP_A HIGH --> Q1 ON --> LED flashes at 2Hz</text>
+<text x="80" y="506" text-anchor="start" font-size="9" fill="#080">Seated: COMP_A LOW --> Q1 OFF --> LED dark</text>
+<text x="530" y="390" text-anchor="start" font-size="10" fill="black" font-weight="bold">J3 PINOUT:</text>
+<text x="530" y="408" text-anchor="start" font-size="9" fill="black">1: GND</text>
+<text x="530" y="420" text-anchor="start" font-size="9" fill="black">2: RED_LED_K</text>
+<text x="530" y="432" text-anchor="start" font-size="9" fill="black">3: AMB_LED_K</text>
+<text x="530" y="444" text-anchor="start" font-size="9" fill="black">4: +5V</text>
+<text x="780" y="560" text-anchor="end" font-size="10" fill="#666">Total components: 25</text>
+<text x="780" y="575" text-anchor="end" font-size="10" fill="#666">Board: 25mm x 35mm, 2-layer, 1oz Cu</text>
+<text x="780" y="590" text-anchor="end" font-size="10" fill="#999">Kinematic Indicator Nest - Rev 1.0</text>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "filename": "kin_nest_pcb.kicad_pro",
+    "version": 1
+  },
+  "schematic": {
+    "drawing": {
+      "default_line_thickness": 6
+    }
+  },
+  "boards": [],
+  "text_variables": {}
+}
