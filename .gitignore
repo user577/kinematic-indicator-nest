@@ -1,0 +1,8 @@
+# FreeCAD generated outputs (regenerate with kinematic_nest.py)
+*.FCStd
+*.FCStd1
+*.stl
+
+# Python
+__pycache__/
+*.pyc
